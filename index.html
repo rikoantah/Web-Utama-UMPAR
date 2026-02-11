@@ -3,64 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PORTAL WEB UMUM & APARATUR</title>
+<title>WEB UMUM & APARATUR</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
-html,body{
+body{
   margin:0;
-  padding:0;
-  height:100%;
   font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
   background:#f4f6f9;
 }
-#menu{
-  padding:24px;
+.container{
+  padding:16px;
 }
 .header{
   background:linear-gradient(135deg,#1a237e,#3949ab);
   color:#fff;
-  padding:22px;
-  border-radius:20px;
+  padding:18px;
+  border-radius:18px;
   text-align:center;
   font-weight:800;
-  font-size:1.4rem;
-  margin-bottom:24px;
+  font-size:1.2rem;
+  margin-bottom:16px;
 }
-.menu-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-.card-menu{
+.menu-item{
   background:#fff;
-  border-radius:20px;
-  padding:26px;
-  cursor:pointer;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 6px 16px rgba(0,0,0,.12);
+  margin-bottom:14px;
+}
+.menu-main{
   display:flex;
   align-items:center;
-  gap:18px;
-  transition:.2s;
-}
-.card-menu:hover{
-  transform:translateY(-4px);
+  gap:14px;
+  text-decoration:none;
+  color:#212529;
 }
 .icon{
-  width:72px;
-  height:72px;
+  width:64px;
+  height:64px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   color:#fff;
-  font-size:2rem;
+  font-size:1.8rem;
+  flex-shrink:0;
 }
 .label{
-  font-size:1.1rem;
+  font-size:1.05rem;
   font-weight:800;
+}
+.wa-btn{
+  margin-top:12px;
+  width:100%;
+  border-radius:16px;
+  font-size:.9rem;
 }
 .pangkat{background:#ab47bc}
 .gaji{background:#66bb6a}
@@ -68,90 +68,87 @@ html,body{
 .jf{background:#26a69a}
 .cuti{background:#26c6da}
 .arsip{background:#42a5f5}
-
-/* iframe */
-#viewer{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:#fff;
-  z-index:9999;
-}
-#viewer iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-#backBtn{
-  position:absolute;
-  top:16px;
-  left:16px;
-  z-index:10000;
-}
 </style>
 </head>
 
 <body>
+<div class="container">
 
-<!-- MENU PORTAL -->
-<div id="menu">
   <div class="header">WEB UMUM & APARATUR</div>
 
-  <div class="menu-grid">
-
-    <div class="card-menu" onclick="openApp('https://script.google.com/macros/s/AKfycbz4kcv2wen_sAKWv-1i2q7Mlxs_sJqQD4NCEvKJGBKAvqgfUv-is3xtOmuySbScmLCY/exec')">
+  <!-- PANGKAT -->
+  <div class="menu-item">
+    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbz4kcv2wen_sAKWv-1i2q7Mlxs_sJqQD4NCEvKJGBKAvqgfUv-is3xtOmuySbScmLCY/exec">
       <div class="icon pangkat"><i class="bi bi-person-badge-fill"></i></div>
       <div class="label">PANGKAT</div>
-    </div>
+    </a>
+    <a class="btn btn-success wa-btn"
+       href="https://wa.me/6281528910659?text=Halo%20saya%20ingin%20bertanya%20tentang%20Pangkat"
+       target="_blank">
+      <i class="bi bi-whatsapp"></i> Informasi – Riko Saputra
+    </a>
+  </div>
 
-    <div class="card-menu" onclick="openApp('https://script.google.com/macros/s/AKfycbxlRHSsH3uixVLTw20Qhcv_HnDt3K3nN5vMJXDz6ejm8kb5oSrjrhdXsKv7dDjmO9Xc/exec')">
+  <!-- GAJI BERKALA -->
+  <div class="menu-item">
+    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbxlRHSsH3uixVLTw20Qhcv_HnDt3K3nN5vMJXDz6ejm8kb5oSrjrhdXsKv7dDjmO9Xc/exec">
       <div class="icon gaji"><i class="bi bi-cash-coin"></i></div>
       <div class="label">GAJI BERKALA</div>
-    </div>
+    </a>
+    <a class="btn btn-success wa-btn"
+       href="https://wa.me/6281528910659?text=Halo%20saya%20ingin%20bertanya%20tentang%20Gaji%20Berkala"
+       target="_blank">
+      <i class="bi bi-whatsapp"></i> Informasi – Riko Saputra
+    </a>
+  </div>
 
-    <div class="card-menu" onclick="openApp('https://script.google.com/macros/s/AKfycbxb6L04oUcKcm01Kf7smPcVVAf-1ZTBGN23Br7vaCIpcrOcu-L60oJCJoNwft7nJgR7Fw/exec')">
+  <!-- UKOM -->
+  <div class="menu-item">
+    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbxb6L04oUcKcm01Kf7smPcVVAf-1ZTBGN23Br7vaCIpcrOcu-L60oJCJoNwft7nJgR7Fw/exec">
       <div class="icon ukom"><i class="bi bi-journal-check"></i></div>
       <div class="label">UKOM</div>
-    </div>
+    </a>
+    <a class="btn btn-success wa-btn"
+       href="https://wa.me/6282112878924?text=Halo%20saya%20ingin%20bertanya%20tentang%20UKOM"
+       target="_blank">
+      <i class="bi bi-whatsapp"></i> Informasi – Rahmi Hidayah
+    </a>
+  </div>
 
-    <div class="card-menu" onclick="openApp('https://script.google.com/macros/s/AKfycbwH0E4ha5Wv3HYFgNJO8Kir1_NAunE36XSHXCeaUPOwcHshvdU0YFAEdxFK283CO61P/exec')">
+  <!-- JABATAN FUNGSIONAL -->
+  <div class="menu-item">
+    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbwH0E4ha5Wv3HYFgNJO8Kir1_NAunE36XSHXCeaUPOwcHshvdU0YFAEdxFK283CO61P/exec">
       <div class="icon jf"><i class="bi bi-briefcase-fill"></i></div>
       <div class="label">JABATAN FUNGSIONAL</div>
-    </div>
+    </a>
+    <a class="btn btn-success wa-btn"
+       href="https://wa.me/6282150371935?text=Halo%20saya%20ingin%20bertanya%20tentang%20Jabatan%20Fungsional"
+       target="_blank">
+      <i class="bi bi-whatsapp"></i> Informasi – Redha Suhari
+    </a>
+  </div>
 
-    <div class="card-menu" onclick="openApp('https://script.google.com/macros/s/AKfycbxAujDBPu0fVin_jxjUfqntXpKi9EGlR7h5i9QI-mIevX1SKrchlNse-Cydvwf_Z4Up/exec')">
+  <!-- CUTI -->
+  <div class="menu-item">
+    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbxAujDBPu0fVin_jxjUfqntXpKi9EGlR7h5i9QI-mIevX1SKrchlNse-Cydvwf_Z4Up/exec">
       <div class="icon cuti"><i class="bi bi-calendar-check-fill"></i></div>
       <div class="label">CUTI</div>
-    </div>
+    </a>
+    <a class="btn btn-success wa-btn"
+       href="https://wa.me/6282134345181?text=Halo%20saya%20ingin%20bertanya%20tentang%20Cuti"
+       target="_blank">
+      <i class="bi bi-whatsapp"></i> Informasi – Iqbal
+    </a>
+  </div>
 
-    <div class="card-menu" onclick="openApp('https://script.google.com/macros/s/AKfycby_3t9Ly_rXdU9dlwlc8RYKoWpqhich6HSpFQMgP2YU8_-VuSWoBz457K1t6EJdoSZ0/exec')">
+  <!-- ARSIP -->
+  <div class="menu-item">
+    <a class="menu-main" href="https://script.google.com/macros/s/AKfycby_3t9Ly_rXdU9dlwlc8RYKoWpqhich6HSpFQMgP2YU8_-VuSWoBz457K1t6EJdoSZ0/exec">
       <div class="icon arsip"><i class="bi bi-folder-fill"></i></div>
       <div class="label">ARSIP</div>
-    </div>
-
+    </a>
   </div>
+
 </div>
-
-<!-- VIEWER -->
-<div id="viewer">
-  <button id="backBtn" class="btn btn-primary" onclick="closeApp()">
-    <i class="bi bi-arrow-left"></i> Kembali ke Menu
-  </button>
-  <iframe id="appFrame"></iframe>
-</div>
-
-<script>
-function openApp(url){
-  document.getElementById('menu').style.display='none';
-  document.getElementById('viewer').style.display='block';
-  document.getElementById('appFrame').src=url;
-}
-function closeApp(){
-  document.getElementById('appFrame').src='';
-  document.getElementById('viewer').style.display='none';
-  document.getElementById('menu').style.display='block';
-}
-</script>
-
 </body>
 </html>
