@@ -10,114 +10,114 @@
 
 <style>
 :root{
-  --radius:20px;
-  --shadow:0 10px 24px rgba(0,0,0,.12);
+  --radius:18px;
+  --shadow:0 12px 30px rgba(0,0,0,.12);
+  --soft:0 6px 16px rgba(0,0,0,.08);
 }
-
-*{box-sizing:border-box}
 
 body{
   margin:0;
   font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
-  background:linear-gradient(180deg,#eef2f7,#f8fafc);
+  background:linear-gradient(180deg,#eef2f7,#f9fbff);
 }
 
 .container{
   max-width:720px;
-  padding:18px;
+  padding:16px;
 }
 
 /* ===== HEADER ===== */
 .header{
   background:linear-gradient(135deg,#1a237e,#3949ab);
   color:#fff;
-  border-radius:26px;
-  padding:26px 20px;
+  border-radius:24px;
+  padding:22px 18px;
   text-align:center;
-  margin-bottom:22px;
+  margin-bottom:18px;
   box-shadow:var(--shadow);
 }
 
 .logo{
-  width:64px;
-  height:64px;
-  margin:0 auto 10px;
+  width:56px;
+  height:56px;
+  margin:0 auto 8px;
   border-radius:50%;
-  background:#fff;
+  background:rgba(255,255,255,.95);
   color:#3949ab;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:2rem;
-  font-weight:900;
+  font-size:1.7rem;
 }
 
 .header h1{
-  font-size:1.25rem;
+  font-size:1.15rem;
   margin:0;
   font-weight:800;
-  letter-spacing:.5px;
+  letter-spacing:.4px;
 }
 
 .header span{
-  font-size:.85rem;
+  font-size:.8rem;
   opacity:.9;
 }
 
-/* ===== MENU CARD ===== */
+/* ===== CARD ===== */
 .menu-item{
-  background:#fff;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(6px);
   border-radius:var(--radius);
-  padding:18px;
-  margin-bottom:16px;
-  box-shadow:var(--shadow);
+  padding:14px;
+  margin-bottom:14px;
+  box-shadow:var(--soft);
   transition:.25s ease;
 }
 
-.menu-item:hover{
-  transform:translateY(-3px);
+.menu-item:active{
+  transform:scale(.985);
 }
 
-/* ===== MENU MAIN ===== */
+/* ===== MAIN LINK ===== */
 .menu-main{
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:14px;
   text-decoration:none;
   color:#1f2937;
 }
 
 /* ICON */
 .icon{
-  width:64px;
-  height:64px;
-  border-radius:18px;
+  width:56px;
+  height:56px;
+  border-radius:16px;
   display:flex;
   align-items:center;
   justify-content:center;
   color:#fff;
-  font-size:1.9rem;
+  font-size:1.6rem;
   flex-shrink:0;
-  box-shadow:0 8px 16px rgba(0,0,0,.25);
+  box-shadow:0 10px 18px rgba(0,0,0,.25);
 }
 
 /* LABEL */
 .label{
-  font-size:1.1rem;
+  font-size:1.05rem;
   font-weight:800;
   line-height:1.2;
 }
 
-/* WA BUTTON */
+/* WA */
 .wa-btn{
-  margin-top:14px;
+  margin-top:10px;
   width:100%;
-  border-radius:14px;
-  font-size:.9rem;
+  border-radius:12px;
+  font-size:.85rem;
   font-weight:600;
+  padding:8px 10px;
 }
 
-/* ===== COLOR THEMES ===== */
+/* ===== COLOR ===== */
 .pangkat{background:linear-gradient(135deg,#ab47bc,#8e24aa)}
 .gaji{background:linear-gradient(135deg,#66bb6a,#43a047)}
 .ukom{background:linear-gradient(135deg,#5c6bc0,#3949ab)}
@@ -133,108 +133,108 @@ body{
 <body>
 <div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="logo"><i class="bi bi-building"></i></div>
-    <h1>BAGIAN UMUM&APARATUR</h1>
-    <span>RSUD dr SOEDARSO</span>
-  </div>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo"><i class="bi bi-building"></i></div>
+  <h1>BAGIAN UMUM & APARATUR</h1>
+  <span>RSUD dr SOEDARSO</span>
+</div>
 
-  <!-- PANGKAT -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://rikoantah.github.io/pangkat-rsds-aktive/">
-      <div class="icon pangkat"><i class="bi bi-person-badge-fill"></i></div>
-      <div class="label">PANGKAT</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6281528910659?text=Halo%20saya%20ingin%20bertanya%20tentang%20Pangkat" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Riko Saputra
-    </a>
-  </div>
+<!-- 1 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://rikoantah.github.io/pangkat-rsds-aktive/">
+    <div class="icon pangkat"><i class="bi bi-person-badge-fill"></i></div>
+    <div class="label">PANGKAT</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6281528910659?text=Halo%20saya%20ingin%20bertanya%20tentang%20Pangkat" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Riko Saputra
+  </a>
+</div>
 
-  <!-- GAJI BERKALA -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://rikoantah.github.io/Gaji-Berkala-RSDS-Soedarso/">
-      <div class="icon gaji"><i class="bi bi-cash-coin"></i></div>
-      <div class="label">GAJI BERKALA</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6281528910659?text=Halo%20saya%20ingin%20bertanya%20tentang%20Gaji%20Berkala" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Riko Saputra
-    </a>
-  </div>
+<!-- 2 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://rikoantah.github.io/Gaji-Berkala-RSDS-Soedarso/">
+    <div class="icon gaji"><i class="bi bi-cash-coin"></i></div>
+    <div class="label">GAJI BERKALA</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6281528910659?text=Halo%20saya%20ingin%20bertanya%20tentang%20Gaji%20Berkala" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Riko Saputra
+  </a>
+</div>
 
-  <!-- UKOM -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbxb6L04oUcKcm01Kf7smPcVVAf-1ZTBGN23Br7vaCIpcrOcu-L60oJCJoNwft7nJgR7Fw/exec">
-      <div class="icon ukom"><i class="bi bi-journal-check"></i></div>
-      <div class="label">UKOM</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6282112878924?text=Halo%20saya%20ingin%20bertanya%20tentang%20UKOM" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Rahmi Hidayah
-    </a>
-  </div>
+<!-- 3 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://script.google.com/macros/s/AKfycbxb6L04oUcKcm01Kf7smPcVVAf-1ZTBGN23Br7vaCIpcrOcu-L60oJCJoNwft7nJgR7Fw/exec">
+    <div class="icon ukom"><i class="bi bi-journal-check"></i></div>
+    <div class="label">UKOM</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6282112878924" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Rahmi Hidayah
+  </a>
+</div>
 
-  <!-- JABATAN FUNGSIONAL -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbwH0E4ha5Wv3HYFgNJO8Kir1_NAunE36XSHXCeaUPOwcHshvdU0YFAEdxFK283CO61P/exec">
-      <div class="icon jf"><i class="bi bi-briefcase-fill"></i></div>
-      <div class="label">JABATAN FUNGSIONAL</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6282150371935?text=Halo%20saya%20ingin%20bertanya%20tentang%20Jabatan%20Fungsional" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Redha Suhari
-    </a>
-  </div>
+<!-- 4 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://script.google.com/macros/s/AKfycbwH0E4ha5Wv3HYFgNJO8Kir1_NAunE36XSHXCeaUPOwcHshvdU0YFAEdxFK283CO61P/exec">
+    <div class="icon jf"><i class="bi bi-briefcase-fill"></i></div>
+    <div class="label">JABATAN FUNGSIONAL</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6282150371935" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Redha Suhari
+  </a>
+</div>
 
-  <!-- CUTI -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://rikocagat.github.io/Tampilan-Cuti-RSDS/">
-      <div class="icon cuti"><i class="bi bi-calendar-check-fill"></i></div>
-      <div class="label">CUTI</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6282134345181?text=Halo%20saya%20ingin%20bertanya%20tentang%20Cuti" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Iqbal
-    </a>
-  </div>
+<!-- 5 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://rikocagat.github.io/Tampilan-Cuti-RSDS/">
+    <div class="icon cuti"><i class="bi bi-calendar-check-fill"></i></div>
+    <div class="label">CUTI</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6282134345181" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Iqbal
+  </a>
+</div>
 
-  <!-- ANGKA KREDIT -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbwAwouQ9BK6S9GzQeFtkUxKQJY_iunIfS35Jfe0wYD8L7A6-C5InI7IkFW4eSOnEKQz/exec">
-      <div class="icon ak"><i class="bi bi-calculator-fill"></i></div>
-      <div class="label">ANGKA KREDIT</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6282134345181?text=Halo%20saya%20ingin%20bertanya%20tentang%20Angka%20Kredit" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Iqbal
-    </a>
-  </div>
+<!-- 6 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://script.google.com/macros/s/AKfycbwAwouQ9BK6S9GzQeFtkUxKQJY_iunIfS35Jfe0wYD8L7A6-C5InI7IkFW4eSOnEKQz/exec">
+    <div class="icon ak"><i class="bi bi-calculator-fill"></i></div>
+    <div class="label">ANGKA KREDIT</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6282134345181" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Iqbal
+  </a>
+</div>
 
-  <!-- SIP / SIB -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbyFdv8rcPuPDTifYkt4Fnc5yjYuM9-1ncYTo86m5JdheGHAGej4S3mxX59MySRVSfH5/exec">
-      <div class="icon sip"><i class="bi bi-file-medical-fill"></i></div>
-      <div class="label">SIP / SIB</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6289680690286?text=Saya%20ingin%20bertanya%20tentang%20SIP%20/%20SIB%20kepada%20Astri%20Maulini" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Astri Maulini
-    </a>
-  </div>
+<!-- 7 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://script.google.com/macros/s/AKfycbyFdv8rcPuPDTifYkt4Fnc5yjYuM9-1ncYTo86m5JdheGHAGej4S3mxX59MySRVSfH5/exec">
+    <div class="icon sip"><i class="bi bi-file-medical-fill"></i></div>
+    <div class="label">SIP / SIB</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6289680690286" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Astri Maulini
+  </a>
+</div>
 
-  <!-- SLKS -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://script.google.com/macros/s/AKfycbz-QIoKTad8Y0K3Rt5qbXen8Om0zNHnR-u0rd-VW4xbJPzmPMn_GpF1bifryl3zp9NVjw/exec">
-      <div class="icon slks"><i class="bi bi-star-fill"></i></div>
-      <div class="label">SLKS</div>
-    </a>
-    <a class="btn btn-success wa-btn" href="https://wa.me/6285240672974?text=Saya%20ingin%20bertanya%20tentang%20SLKS%20kepada%20Tut%20Wuri" target="_blank">
-      <i class="bi bi-whatsapp"></i> Informasi – Tut Wuri
-    </a>
-  </div>
+<!-- 8 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://script.google.com/macros/s/AKfycbz-QIoKTad8Y0K3Rt5qbXen8Om0zNHnR-u0rd-VW4xbJPzmPMn_GpF1bifryl3zp9NVjw/exec">
+    <div class="icon slks"><i class="bi bi-star-fill"></i></div>
+    <div class="label">SLKS</div>
+  </a>
+  <a class="btn btn-success wa-btn" href="https://wa.me/6285240672974" target="_blank">
+    <i class="bi bi-whatsapp"></i> Informasi – Tut Wuri
+  </a>
+</div>
 
-  <!-- ARSIP -->
-  <div class="menu-item">
-    <a class="menu-main" href="https://rikoantah.github.io/Tampilan-Arsip-Umpar-RSDS/">
-      <div class="icon arsip"><i class="bi bi-folder-fill"></i></div>
-      <div class="label">ARSIP</div>
-    </a>
-  </div>
+<!-- 9 -->
+<div class="menu-item">
+  <a class="menu-main" href="https://rikoantah.github.io/Tampilan-Arsip-Umpar-RSDS/">
+    <div class="icon arsip"><i class="bi bi-folder-fill"></i></div>
+    <div class="label">ARSIP</div>
+  </a>
+</div>
 
 </div>
 </body>
