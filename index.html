@@ -11,108 +11,104 @@
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
-  background:linear-gradient(180deg,#f2f2f7,#e9ecf3);
-  color:#1c1c1e;
+  background:#f5f5f7;
+  color:#1d1d1f;
 }
 
 .container{
   max-width:520px;
   margin:auto;
-  padding:24px 18px 40px;
+  padding:28px 20px 60px;
 }
 
 /* ===== HEADER ===== */
-.header{
-  margin-bottom:28px;
+.header h1{
+  font-size:2rem;
+  font-weight:800;
+  margin:0;
 }
 
-.header h1{
-  font-size:1.6rem;
+.header p{
+  margin:6px 0 26px;
+  color:#6e6e73;
+  font-size:1rem;
+}
+
+/* ===== APP CARD ===== */
+.app-card{
+  background:#fff;
+  border-radius:24px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.app-row{
+  display:flex;
+  gap:16px;
+}
+
+.app-icon{
+  width:64px;
+  height:64px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.8rem;
+  color:#fff;
+  flex-shrink:0;
+}
+
+.app-info{
+  flex:1;
+}
+
+.app-title{
+  font-size:1.1rem;
   font-weight:700;
   margin:0;
 }
 
-.header span{
-  font-size:.95rem;
+.app-desc{
+  font-size:.85rem;
   color:#6e6e73;
+  margin:4px 0 10px;
 }
 
-/* ===== CARD (APPLE STYLE) ===== */
-.card-ios{
-  background:rgba(255,255,255,0.65);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-  border-radius:28px;
-  padding:18px;
-  margin-bottom:18px;
-  box-shadow:
-    0 8px 20px rgba(0,0,0,.05),
-    inset 0 1px 0 rgba(255,255,255,.8);
-  transition:all .25s ease;
-}
-
-.card-ios:active{
-  transform:scale(.97);
-}
-
-.row-ios{
+.app-actions{
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 
-.left{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
-.icon-ios{
-  width:52px;
-  height:52px;
-  border-radius:18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.4rem;
-  color:#fff;
-}
-
-.title-ios{
-  font-size:1.05rem;
-  font-weight:600;
-}
-
-.open-btn{
+.get-btn{
   text-decoration:none;
   background:#007aff;
   color:#fff;
-  padding:8px 16px;
+  padding:6px 18px;
   border-radius:999px;
   font-size:.8rem;
   font-weight:600;
 }
 
-.wa-ios{
-  margin-top:12px;
-  display:inline-block;
+.wa-link{
   text-decoration:none;
-  font-size:.8rem;
+  font-size:.75rem;
   color:#007aff;
   font-weight:500;
 }
 
-/* Soft iOS Colors */
-.pangkat{background:#af52de;}
-.gaji{background:#34c759;}
-.ukom{background:#5856d6;}
-.jf{background:#30b0c7;}
-.cuti{background:#5ac8fa;}
-.ak{background:#ff9500;}
-.sip{background:#ff3b30;}
-.slks{background:#ffd60a; color:#000;}
-.arsip{background:#0a84ff;}
-
+/* ===== COLORS ala iOS ===== */
+.pangkat{background:#af52de}
+.gaji{background:#34c759}
+.ukom{background:#5856d6}
+.jf{background:#30b0c7}
+.cuti{background:#5ac8fa}
+.ak{background:#ff9500}
+.sip{background:#ff3b30}
+.slks{background:#ffd60a;color:#000}
+.arsip{background:#0a84ff}
 </style>
 </head>
 
@@ -120,114 +116,142 @@ body{
 <div class="container">
 
 <div class="header">
-  <h1>Bagian Umum & Aparatur</h1>
-  <span>RSUD dr Soedarso</span>
+  <h1>Umum & Aparatur</h1>
+  <p>RSUD dr Soedarso</p>
 </div>
 
 <!-- PANGKAT -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios pangkat"><i class="bi bi-person-badge-fill"></i></div>
-      <div class="title-ios">Pangkat</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon pangkat"><i class="bi bi-person-badge-fill"></i></div>
+    <div class="app-info">
+      <div class="app-title">Pangkat</div>
+      <div class="app-desc">Pengajuan & informasi kenaikan pangkat</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6281528910659">Info: Riko</a>
+        <a class="get-btn" href="https://rikoantah.github.io/pangkat-rsds-aktive/">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://rikoantah.github.io/pangkat-rsds-aktive/">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6281528910659">Informasi – Riko Saputra</a>
 </div>
 
 <!-- GAJI -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios gaji"><i class="bi bi-cash-coin"></i></div>
-      <div class="title-ios">Gaji Berkala</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon gaji"><i class="bi bi-cash-coin"></i></div>
+    <div class="app-info">
+      <div class="app-title">Gaji Berkala</div>
+      <div class="app-desc">Pengajuan & monitoring KGB</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6281528910659">Info: Riko</a>
+        <a class="get-btn" href="https://rikoantah.github.io/Gaji-Berkala-RSDS-Soedarso/">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://rikoantah.github.io/Gaji-Berkala-RSDS-Soedarso/">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6281528910659">Informasi – Riko Saputra</a>
 </div>
 
 <!-- UKOM -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios ukom"><i class="bi bi-journal-check"></i></div>
-      <div class="title-ios">UKOM</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon ukom"><i class="bi bi-journal-check"></i></div>
+    <div class="app-info">
+      <div class="app-title">UKOM</div>
+      <div class="app-desc">Uji kompetensi tenaga kesehatan</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6282112878924">Info: Rahmi</a>
+        <a class="get-btn" href="https://script.google.com/macros/s/AKfycbxb6L04oUcKcm01Kf7smPcVVAf-1ZTBGN23Br7vaCIpcrOcu-L60oJCJoNwft7nJgR7Fw/exec">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://script.google.com/macros/s/AKfycbxb6L04oUcKcm01Kf7smPcVVAf-1ZTBGN23Br7vaCIpcrOcu-L60oJCJoNwft7nJgR7Fw/exec">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6282112878924">Informasi – Rahmi Hidayah</a>
 </div>
 
 <!-- JF -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios jf"><i class="bi bi-briefcase-fill"></i></div>
-      <div class="title-ios">Jabatan Fungsional</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon jf"><i class="bi bi-briefcase-fill"></i></div>
+    <div class="app-info">
+      <div class="app-title">Jabatan Fungsional</div>
+      <div class="app-desc">Data & pembinaan jabatan fungsional</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6282150371935">Info: Redha</a>
+        <a class="get-btn" href="https://script.google.com/macros/s/AKfycbwH0E4ha5Wv3HYFgNJO8Kir1_NAunE36XSHXCeaUPOwcHshvdU0YFAEdxFK283CO61P/exec">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://script.google.com/macros/s/AKfycbwH0E4ha5Wv3HYFgNJO8Kir1_NAunE36XSHXCeaUPOwcHshvdU0YFAEdxFK283CO61P/exec">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6282150371935">Informasi – Redha Suhari</a>
 </div>
 
 <!-- CUTI -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios cuti"><i class="bi bi-calendar-check-fill"></i></div>
-      <div class="title-ios">Cuti</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon cuti"><i class="bi bi-calendar-check-fill"></i></div>
+    <div class="app-info">
+      <div class="app-title">Cuti</div>
+      <div class="app-desc">Pengajuan dan riwayat cuti pegawai</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6282134345181">Info: Iqbal</a>
+        <a class="get-btn" href="https://rikocagat.github.io/Tampilan-Cuti-RSDS/">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://rikocagat.github.io/Tampilan-Cuti-RSDS/">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6282134345181">Informasi – Iqbal</a>
 </div>
 
 <!-- ANGKA KREDIT -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios ak"><i class="bi bi-calculator-fill"></i></div>
-      <div class="title-ios">Angka Kredit</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon ak"><i class="bi bi-calculator-fill"></i></div>
+    <div class="app-info">
+      <div class="app-title">Angka Kredit</div>
+      <div class="app-desc">Perhitungan & evaluasi angka kredit</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6282134345181">Info: Iqbal</a>
+        <a class="get-btn" href="https://script.google.com/macros/s/AKfycbwAwouQ9BK6S9GzQeFtkUxKQJY_iunIfS35Jfe0wYD8L7A6-C5InI7IkFW4eSOnEKQz/exec">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://script.google.com/macros/s/AKfycbwAwouQ9BK6S9GzQeFtkUxKQJY_iunIfS35Jfe0wYD8L7A6-C5InI7IkFW4eSOnEKQz/exec">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6282134345181">Informasi – Iqbal</a>
 </div>
 
 <!-- SIP -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios sip"><i class="bi bi-file-medical-fill"></i></div>
-      <div class="title-ios">SIP / SIB</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon sip"><i class="bi bi-file-medical-fill"></i></div>
+    <div class="app-info">
+      <div class="app-title">SIP / SIB</div>
+      <div class="app-desc">Pengurusan izin praktik tenaga kesehatan</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6289680690286">Info: Astri</a>
+        <a class="get-btn" href="https://script.google.com/macros/s/AKfycbyFdv8rcPuPDTifYkt4Fnc5yjYuM9-1ncYTo86m5JdheGHAGej4S3mxX59MySRVSfH5/exec">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://script.google.com/macros/s/AKfycbyFdv8rcPuPDTifYkt4Fnc5yjYuM9-1ncYTo86m5JdheGHAGej4S3mxX59MySRVSfH5/exec">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6289680690286">Informasi – Astri Maulini</a>
 </div>
 
 <!-- SLKS -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios slks"><i class="bi bi-star-fill"></i></div>
-      <div class="title-ios">SLKS</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon slks"><i class="bi bi-star-fill"></i></div>
+    <div class="app-info">
+      <div class="app-title">SLKS</div>
+      <div class="app-desc">Sistem layanan kompetensi & sertifikasi</div>
+      <div class="app-actions">
+        <a class="wa-link" href="https://wa.me/6285240672974">Info: Tut Wuri</a>
+        <a class="get-btn" href="https://script.google.com/macros/s/AKfycbz-QIoKTad8Y0K3Rt5qbXen8Om0zNHnR-u0rd-VW4xbJPzmPMn_GpF1bifryl3zp9NVjw/exec">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://script.google.com/macros/s/AKfycbz-QIoKTad8Y0K3Rt5qbXen8Om0zNHnR-u0rd-VW4xbJPzmPMn_GpF1bifryl3zp9NVjw/exec">Buka</a>
   </div>
-  <a class="wa-ios" href="https://wa.me/6285240672974">Informasi – Tut Wuri</a>
 </div>
 
 <!-- ARSIP -->
-<div class="card-ios">
-  <div class="row-ios">
-    <div class="left">
-      <div class="icon-ios arsip"><i class="bi bi-folder-fill"></i></div>
-      <div class="title-ios">Arsip</div>
+<div class="app-card">
+  <div class="app-row">
+    <div class="app-icon arsip"><i class="bi bi-folder-fill"></i></div>
+    <div class="app-info">
+      <div class="app-title">Arsip</div>
+      <div class="app-desc">Dokumen & arsip kepegawaian</div>
+      <div class="app-actions">
+        <span></span>
+        <a class="get-btn" href="https://rikoantah.github.io/Tampilan-Arsip-Umpar-RSDS/">GET</a>
+      </div>
     </div>
-    <a class="open-btn" href="https://rikoantah.github.io/Tampilan-Arsip-Umpar-RSDS/">Buka</a>
   </div>
 </div>
 
